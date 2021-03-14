@@ -11,3 +11,12 @@ body {
   font-size: 30px;
   color: white;
 }
+.ship-links {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+}
+.ship-links:hover {
+  color: rgb(204, 204, 245);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}

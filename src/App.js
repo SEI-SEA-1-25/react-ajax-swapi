@@ -26,7 +26,9 @@ function App() {
     fetchData();
   }, []);
   //   console.log(ships);
-
+  if (ships.length === 0) {
+    return <div></div>;
+  }
   return (
     <div>
       <h1>Star Wars React Deliverable</h1>
@@ -34,10 +36,10 @@ function App() {
       <BrowserRouter>
         <div className="container">
           <Link to="/star-ships" className="links">
-            Star Ships{" | "}
+            &emsp; Star Ships &emsp;|&emsp;
           </Link>
           <Link to="/" className="links">
-            Home
+            Home &emsp;
           </Link>
 
           <Switch>

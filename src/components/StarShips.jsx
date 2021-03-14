@@ -9,9 +9,11 @@ const StarShips = ({ ships }) => {
       <h1>Star Ships:</h1>
       {ships.map((ship, idx) => {
         return (
-          <Link to={`/star-ships/${idx}`} key={ship.name}>
-            {ship.name}
-          </Link>
+          <ul key={ship.name}>
+            <Link to={`/star-ships/${idx}`} className="ship-links">
+              {ship.name}
+            </Link>
+          </ul>
         );
       })}
     </>

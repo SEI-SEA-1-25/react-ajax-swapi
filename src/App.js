@@ -17,8 +17,8 @@ function App() {
 
         <main className="App">
           <Route path="/starships" component={Starships} />
-
-          <Route path="/starship-show" component={StarshipShow} />
+          {/* https://reactrouter.com/web/api/match */}
+          <Route exact path="/starship-show/:ship" component={StarshipShow} />
         </main>
       </Router>
     </div>

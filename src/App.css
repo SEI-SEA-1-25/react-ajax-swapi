@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap");
 
 body {
-  background-color: black;
+  background-image: url("./stars.jpeg");
   font-family: "Oswald", sans-serif;
   color: rgb(238, 238, 35);
   text-align: center;
+}
+.links {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  color: white;
 }

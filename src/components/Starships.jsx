@@ -20,7 +20,7 @@ export default function Starships(props) {
 
       // map axios get reqs to each url
       let responses = urls.map(url => axios.get(url))
-
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
       // await for every response to resolve
       responses = await Promise.all(responses)
 
@@ -43,6 +43,7 @@ export default function Starships(props) {
       <h3>Starships:</h3>
 
       <div>
+        
         {starshipButtons}
       </div>
     </div>

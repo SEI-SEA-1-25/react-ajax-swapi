@@ -5,6 +5,7 @@ import StarshipData from './components/Starships/StarshipData'
 import People from './components/People/People'
 import PeopleData from './components/People/PeopleData'
 import Planets from './components/Planets/Planets'
+import PlanetData from './components/Planets/PlanetsData'
 import Home from './components/Home'
 
 
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/People" component ={People}/>
         <Route path="/peopleData" component ={PeopleData}/>
         <Route path="/Planets" component ={Planets}/>
+        <Route path="/planetData" component ={PlanetData}/>
         <Route path="/" component ={Home}/>
        
         

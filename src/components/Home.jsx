@@ -7,12 +7,17 @@ const Home = () => {
 
         <div className = "home">
        
-       
+            <div className= "homeLinksDiv">
+                <Link className="Links"  to="/starships"> STARSHIPS </Link>
+            </div>
 
-            <Link to="/starships"> STARSHIPS </Link>
-            <Link to="/people"> PEOPLE</Link>
-            <Link to="/planets"> PLANETS </Link>
-    
+            <div className= "homeLinksDiv">
+                <Link className ="Links" to="/planets"> PLANETS </Link>
+            </div>
+        
+            <div className= "homeLinksDiv">
+                <Link className ="Links" to="/people"> PEOPLE</Link>
+            </div>
         
 
         </div>

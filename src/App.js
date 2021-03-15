@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import StarshipPage from './components/StarshipPage'
 import Home from './components/Home'
 

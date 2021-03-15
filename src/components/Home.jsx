@@ -1,6 +1,5 @@
-import React, { Components} from 'react'
 import { useState, useEffect } from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const StarshipPage = () => {
@@ -22,15 +21,8 @@ const StarshipPage = () => {
 
     starships.map((starship, index) => {
       return(
-        <div key={index}>
-          <Link
-            to={{'/starship'
-            state: starship
-          }}
-            key={starship.name}
-          >
-              {{starship.name}}
-          <Link />
+        <div key={starship.name}>
+          <Link to={`/starship${index}`}> {starship.name} </Link>
         </div>
       )
     })

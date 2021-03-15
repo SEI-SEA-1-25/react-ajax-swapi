@@ -7,7 +7,7 @@ const StarshipPage = (props) => {
             <h4>Name: {props.location.state.name}</h4>
             <h4>Model: {props.location.state.model}</h4>
             <Link 
-                to='/'
+                to='/starships'
             >RETURN</Link>
         </div>
     )

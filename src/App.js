@@ -14,8 +14,8 @@ function App() {
       const json = await response.json()
       const datas = json.results
       setInformations(datas)
-      
   }
+
   useEffect(() => {
       fetchData()
   }, [])
@@ -25,11 +25,11 @@ function App() {
         <Header />
         <div>
           <Route exact path="/" render={() => {
-            return <StarshipLists starshipName={informations} />
+            return <StarshipLists starshipInfos={informations} />
           }}/>
+
           <Route path="/starships/:id" render={(props) => {
-            const starshipsInfo = informations[props.match.params.id]
-            return <Starships {...starshipsInfo} />
+            return <Starships location={props}/> //{...starshipsInfo} 
           }} />
           
         </div>

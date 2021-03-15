@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom'
 function StarshipLists (props) {
 
-    const temp = props.starshipName.map((data, index) => {
+    const temp = props.starshipInfos.map((starship, index) => {
         return <div key={index}>
-                  <Link to={`/starships/${index}`} className="each-box">{data.name}</Link>
+                    <Link to={{
+                            pathname: `/starships/${index}`,
+                            state: starship
+                            }} 
+                            className="each-box" key={starship.name}>{starship.name}
+                    </Link>
                </div>
       })
     return (

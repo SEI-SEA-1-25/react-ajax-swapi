@@ -36,12 +36,12 @@ function App() {
       <BrowserRouter>
         <div className="container">
           <Link to="/star-ships" className="links">
-            &emsp; Star Ships &emsp;|&emsp;
+            &emsp; Star Ships{" "}
           </Link>
+          &emsp;|&emsp;
           <Link to="/" className="links">
             Home &emsp;
           </Link>
-
           <Switch>
             <Route path="/star-ships" exact={true}>
               <StarShips ships={ships} />

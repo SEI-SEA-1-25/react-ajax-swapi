@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import PilotList from './PilotList.jsx'
 
 export default function StarshipPage(props) {
+  console.log(props)
   const ship = props.location.state
   const [pilots, setPilots] = useState([])
 

@@ -18,7 +18,9 @@ function App() {
         <main className="App">
           <Route path="/starships" component={Starships} />
           {/* https://reactrouter.com/web/api/match */}
-          <Route exact path="/starship-page/:ship" render={ ({location}) =>  <StarshipPage  location={location}/> }  />
+          <Route exact path="/starship-page/:ship" render={ ({location}) =>  <StarshipPage location={location}/> }  />
+          {/* will work, banking default behavior */}
+          {/* <Route exact path="/starships/:ship"  component={StarshipPage} /> */}
         </main>
       </Router>
     </div>

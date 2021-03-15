@@ -23,9 +23,11 @@ function App() {
   return (
     <Router>
       <div className="App">
+
+        {/* <Route exact path='/' component={Starships} /> */}
         <Route 
           path="/starship"
-          render= {(props) => <StarshipPage {...props}/> }
+          render= {({location}) => <StarshipPage location={location}/> }
           
         />
      

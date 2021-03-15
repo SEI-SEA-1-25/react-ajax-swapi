@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Starships from './components/Starships'
-import StarshipShow from './components/StarshipShow'
+import StarshipPage from './components/StarshipPage'
 import './App.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <main className="App">
           <Route path="/starships" component={Starships} />
           {/* https://reactrouter.com/web/api/match */}
-          <Route exact path="/starship-show/:ship" component={StarshipShow} />
+          <Route exact path="/starship-page/:ship" component={StarshipPage} />
         </main>
       </Router>
     </div>

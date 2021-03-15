@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap");
+
+body {
+  background-image: url("./stars.jpeg");
+  font-family: "Oswald", sans-serif;
+  color: rgb(238, 238, 35);
+  text-align: center;
+}
+.links {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+}
+.links:hover {
+  color: blue;
+}
+.ship-links {
+  color: white;
+  font-size: 25px;
+  width: 500px;
+  text-decoration: none;
+  background-color: dimgray;
+  padding: 7px;
+  border-radius: 20%;
+}
+.ship-links:hover {
+  color: rgb(249, 0, 0);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Starships from './components/Starships'
 import StarshipPage from './components/StarshipPage'
 import './App.css';
@@ -16,7 +16,11 @@ function App() {
         </header>
 
         <main className="App">
+          <Switch>
+            <Route exact path="/starships" component={Starships} />
 
+            <Route exact path="/starships/:ship" component={StarshipPage} />
+          </Switch>
         </main>
       </Router>
     </div>

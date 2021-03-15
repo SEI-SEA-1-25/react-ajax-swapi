@@ -1,7 +1,7 @@
-export default function PilotList(props) {
+export default function PilotList() {
   return (
     <div>
-      <h5>{props.pilot.name}</h5>
+      hello from the pilot list
     </div>
   )
 }

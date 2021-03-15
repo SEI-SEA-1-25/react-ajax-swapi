@@ -1,0 +1,160 @@
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: ;
+  background-image: url("https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/stosypjwlnzuowss8kt6.gif");
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(145, 113, 113);
+}
+.title {
+  margin-top: 2em;
+  position: relative;
+  text-shadow: 0 0 20px black;
+  font-family: din;
+}
+.App-logo {
+  text-align: center;
+  height: 60vh;
+  position: relative;
+  border: 3px solid rgb(10, 1, 1);
+  border-radius: 50%;
+  box-shadow: inset 0 0 80px rgba(255, 255, 255, 0.432), inset 0 0 60px rgba(87, 23, 23, 0.452), 0 0 200px rgba(255, 0, 0, 0.541), 0 0 2px rgba(255, 255, 255, 0.534), 0 0 8px rgb(0, 0, 0);
+  background: #b1943762;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+// ***************************************a
+// background
+// ***************************************a
+
+
+
+
+/* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    color:#ffffff;
+    display:block;
+    height:50px;
+    position:relative;
+    z-index:0;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}
+
+// ***************************************a
+// ***************************************a
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ // ***************************************a
+// ***************************************a
+
+
+
+
+
+
+
+ // ***************************************a
+// ***************************************a
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+
+.clouds{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index:2;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+
+

@@ -1,0 +1,274 @@
+
+
+
+
+
+
+
+<div class="content">
+    <h1>Responsive image gallery</h1>
+    <div class="gallery">
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1551084230-378b834f198d?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Plant"></a>
+            <figcaption>Plant</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1551945160-411357e1a76b?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Man with facial tattoo"></a>
+            <figcaption>Man with facial tattoo</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1552046123-be0ccc2f6e4f?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Leasure"></a>
+            <figcaption>Leasure</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1553356009-50faee7aa84c?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Pretty colors"></a>
+            <figcaption>Pretty colors</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1552124304-4e34dc2fd70d?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Architecture"></a>
+            <figcaption>Architecture</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1513553404607-988bf2703777?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Beach"></a>
+            <figcaption>Beach</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1519405530001-3b5e82ba4dac?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Mountains"></a>
+            <figcaption>Mountains</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Starry sky"></a>
+            <figcaption>Starry sky</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="Forest"></a>
+            <figcaption>Forest</figcaption>
+        </figure>
+        <figure class="galleryItem">
+            <a href="#"><img src="https://images.unsplash.com/photo-1527956041665-d7a1b380c460?ixlib=rb-1.2.1&q=10&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ" alt="City"></a>
+            <figcaption>City</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+
+
+
+
+CSS
+
+:root {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+    margin: auto;
+
+    @media (min-width: 40em) {
+        width: 40em;
+    }
+
+    @media (min-width: 80em) {
+        width: 80em;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    margin: auto;
+
+    .galleryItem {
+        flex: 1 1 auto;
+        margin: 0.3em;
+        border: 1px solid black;
+        position: relative;
+        width: 12em;
+        height: 13em;
+        overflow: hidden;
+
+        @media (min-width: 40em) {
+            width: 10em;
+            height: 10em;
+        }
+
+        @media (min-width: 80em) {
+            width: 17em;
+            height: 17em;
+        }
+
+        &:hover img {
+            transform: scale(1.2);
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s;
+    }
+
+    figcaption {
+        background-color: rgba(#000 ,.4);
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1em;
+    }
+}
+
+.lightBoxOverlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#000, .7);
+
+    .closeButton {
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+
+        color: #000;
+        background-color: #fff;
+        font-size: 1.5em;
+        border-radius: 1em;
+        padding: 0.44em 0.66em;
+        height: 2em;
+        width: 2em;
+        
+        cursor: pointer;
+        transition: .2s;
+        
+        &:hover {
+            color: #fff;
+            background-color: #000;
+        }
+
+        @media (min-width: 80em) {
+            font-size: 2em;
+
+            top: 1em;
+            right: 1em;
+
+            height: 2em;
+            width: 2em;
+        }
+    }
+
+    .container {
+        margin: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+
+        @media (min-width: 40em) {
+            padding: 3em;
+        }
+
+        @media (min-width: 80em) {
+            padding: 5em;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    figcaption {
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        color: #fff;
+        background: rgba(0,0,0, .7);
+        border-radius: 5em;
+    }
+}
+
+
+
+
+JS
+
+let galleryItems = document.querySelectorAll('.galleryItem');
+
+const closeLightBox = (galleryItem, overlay) => {
+    let originLinkTag = galleryItem.querySelector('a');
+    let image = overlay.querySelector('img');
+    let caption = overlay.querySelector('figcaption');    
+    
+    // move image and caption back to their original parents
+    originLinkTag.appendChild(image);
+    galleryItem.appendChild(caption);
+    
+    // remove the light box overlay
+    document.body.removeChild(overlay)
+}
+
+const openLightBox = (galleryItem) => {
+    // create the overlay to darken the page
+    let lightBoxOverlay = document.createElement('div');
+    lightBoxOverlay.classList.add('lightBoxOverlay');
+
+    // create the close button
+    let lightBoxClose = document.createElement('a');
+    lightBoxClose.innerText = 'X';
+    lightBoxClose.classList.add('closeButton');
+    lightBoxOverlay.appendChild(lightBoxClose);    
+
+    // create a container for the image
+    let lightBoxImageContainer = document.createElement('figure');
+    lightBoxImageContainer.classList.add('container');
+    lightBoxOverlay.appendChild(lightBoxImageContainer);
+
+    // take the already existing image and move it into the overlay container
+    let image = galleryItem.querySelector('img');
+    lightBoxImageContainer.appendChild(image);
+    
+    // take the already existing figcaption and move it into the overlay container
+    let caption = galleryItem.querySelector('figcaption');
+    lightBoxImageContainer.appendChild(caption);
+    
+    // add a closing routine to close button
+    lightBoxClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeLightBox(galleryItem, lightBoxOverlay);
+    });
+    
+    // display the overlay
+    document.body.appendChild(lightBoxOverlay);
+}
+
+galleryItems.forEach(el => {
+    let linkTag = el.querySelector('a');
+    linkTag.addEventListener('click', (e) => {
+        e.preventDefault();
+        openLightBox(el);
+    });
+});

@@ -1,31 +1,16 @@
-import { Component } from 'react'
+import { Link } from 'react-router-dom';
 import './App.css';
 
-export default class App extends Component {
-  state = {
-    loading: true,
-    ship: null
-  };
+import Starships from './components/Starships';
 
-  async componentDidMount() {
-    const url = "https://swapi.dev/api/starships/"
-    const response = await fetch(url);
-    const data = await response.json()
-    this.setState({ ship: data.results[0], loading: false })
-  }
+function App() {
+  return (
 
+    <div className="App">
+      <Starships />
+    </div>
 
-  render() {
-    return (
-      <div>
-        {this.state.loading || !this.state.ship ? (
-          <div>loading...</div>
-        ) : (
-          <div>
-            {this.state.ship.name}
-          </div>
-        )}
-      </div>
-    )
-  }
+  );
 }
+
+export default App;

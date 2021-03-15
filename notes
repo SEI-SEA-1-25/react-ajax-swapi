@@ -1,0 +1,21 @@
+ state = {
+    loading: true,
+    ship: null
+  };
+
+  
+
+
+  render() {
+    return (
+      <div>
+        {this.state.loading || !this.state.ship ? (
+          <div>loading...</div>
+        ) : (
+          <div>
+            {this.state.ship.name}
+          </div>
+        )}
+      </div>
+    )
+  }

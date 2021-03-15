@@ -8,18 +8,30 @@ function Starship(props) {
     const [ship, setShip ] = useState([]);
 
     useEffect(() => {
-        fetch(Ship_API)
+        try{
+
+            fetch(Ship_API)
             .then((res)=> res.json())
             .then((data) => {
                 setShip(data.results);
             });
-        });
+
+        } catch (err) {
+            console.log(err);
+
+        }
+        
+        }, []);
+
+        const shiip = ship.map((ele)=> {
+            console.log(ele.name) //MAP TO A COMPONENT
+        })
 
     return(
         <div>
-            {ship.map((ele)=> {
-                console.log(ele.name)
-            })}
+            <div>
+                {shiip}
+            </div>
         </div>
     );
 }

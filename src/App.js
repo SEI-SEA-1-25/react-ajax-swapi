@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import Starships from './components/Starships'
 import StarshipPage from './components/StarshipPage'
 import './App.css';
@@ -16,11 +16,13 @@ function App() {
         </header>
 
         <main className="App">
-          <Route path="/starships" component={Starships} />
+          <Switch>
+
+          <Route exact path="/starships" component={Starships} />
           {/* https://reactrouter.com/web/api/match */}
-          <Route exact path="/starship-page/:ship" render={ ({location}) =>  <StarshipPage location={location}/> }  />
-          {/* will work, banking default behavior */}
-          {/* <Route exact path="/starships/:ship"  component={StarshipPage} /> */}
+          <Route exact path="/starships/:ship" component={StarshipPage} />
+          {/* <Route exact path="/starships/:ship" render={ ({location}) =>  <StarshipPage location={location}/> }  /> */}
+          </Switch>
         </main>
       </Router>
     </div>

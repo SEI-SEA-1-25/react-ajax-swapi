@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom' 
+
+import { Route, Link } from 'react-router-dom' 
 
 import StarshipPage from './StarshipPage'
 
@@ -10,17 +10,36 @@ function Home() {
     console.log(starships)
 
     useEffect(() => {
-        axios.get('https://swapi.dev/api/starships/')
-        .then(response => {
-            setStarships(response.data.results)
+        fetch ('https://swapi.dev/api/starships/')
+        .then((response) => response.json())
+        .then((data) => {
+            const starships = Object.values(data)
+            setStarships(starships)
         })
     }, [])
 
 
     return (
         <div>
-
-            <h2>Hello from Home!</h2>
+            {starships.map((starship) => {
+                return (
+                    <div>
+                        <Link 
+                            // key={starship.results.name}
+                            // to={{
+                            //     pathname: '/starship',
+                            //     state: starship
+                            // }}
+                        >
+                            {starship.results.name}
+                        </Link>
+                        <Route path='/starship' render={({location}) => 
+                        <StarshipPage 
+                            location={location}/>
+                         }/>
+                    </div>
+                )
+            })}
         </div>
     )
 }
